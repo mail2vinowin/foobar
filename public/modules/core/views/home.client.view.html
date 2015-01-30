@@ -1,0 +1,33 @@
+<section data-ng-controller="HomeController">
+	<div class="row">
+		<div class="col-sm-6" ng-repeat="alert in alerts">
+			<div class="row">
+				<div class="col-xs-4">
+					<h1 class="pull-right">
+						<button type="button" class="btn" ng-class="alert.colour">
+							<i class="glyphicon" ng-class="alert.icon"></i>
+						</button>
+					</h1>
+				</div>
+				<div class="col-xs-8">
+					<h1>{{alert.total}}</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-8 col-xs-offset-4">
+					<span class="text-muted small">{{alert.description}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 	 dc.js default currency symbol ($): <span id="currency-default">{{100000 | currency}}</span><br>
+  custom currency identifier (USD$): <span id="currency-custom">{{100000 | currency:"USD$"}}</span><br>
+  no fractions (0): <span id="currency-no-fractions">{{100000 | currency:"USD$":0}}</span><br><br><br><br>
+ -->
+	
+	<a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+	<div id="Product-Percentage"></div>
+	<div id="InputCost"></div>
+	<div id="OutputCost"></div>
+
+</section>
